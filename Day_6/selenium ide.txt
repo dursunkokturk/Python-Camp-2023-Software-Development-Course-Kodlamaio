@@ -1,0 +1,53 @@
+Selenium IDE Nedir? 
+Kod ortamında yapılan testlerin browser ortaminda yapilması sağlar.
+
+Selenium IDE yi chrome da kullanmak için
+ilk olarak chrome store dan chrome a eklemek gerekiyor.
+
+İkinci olarak Chrome a ekleme işlemi bittikten sonra selenium ide eklentisini aktif etmek için chrome içinde sağ üst köşede puzzle parçası gibi görünen simgeye tıklıyoruz.
+
+Açılan pencerede selenium ide nin karşısında görünen raptiye şeklindeki simgeye tıklıyoruz.
+
+Browser da sağ üst köşede yer alan simgeler arasında selenium ide simgesine tıklıyoruz ve selenium ide yi başlatıyoruz.
+
+Selenium IDE başladığında ekranda Welcome to Selenium IDE yazılı pencere görünecek.
+
+Welcome to Selenium IDE yazılı pencerede Create a New Project Yazısına Tıklıyoruz. Sonraki ekranda Project Name alanına proje ismi giriyoruz ve OK butonuna tıklıyoruz.
+
+Selenium IDE Ekranı açıldıktan sonra ekranın ortasında üst tarafta Playback Base URL yazan satıra test işlemini yapacağımız sitenin linkini giriyoruz.
+
+Sonra Selenium IDE ekranında sağ üst köşede kırmızı harf ile REC yazan kırmızı çerçeveli butona tıklıyoruz ve teste başlıyoruz. 
+
+Site açıldıktan sonra username ve password alanlarına data giriyoruz ve Login butonuna tıklıyoruz. Bu işlemi yaptıktan sonra Selenium IDE içinde orta kısımda Command Target alanlarının altında yapılan testin sonuçları yer alıyor. 
+
+REC yazılı butonun olduğu yerde görünen STOP butonuna tıklıyoruz ve testi durduruyoruz. Test durdurma işleminden sonra gelen ekranda test sonucuna bir isim girmek gerekiyor. Test sonucuna isim girdikten sonra Ok butonuna tıklıyoruz ve sonucu inceliyoruz.
+
+Test sonucunda
+Command altında yer alan 	open		 	ve Target altında yer alan 	/ 	linki girilen site
+Command altında yer alan 	set windows size 	ve Target altında yer alan 	css 	ile başlayan kısım
+
+Ortada görünen degerlerin üstüne tıklandığında ortada alt tarafta yer alan Command açılır penceresinde yapılacak işlemi değiştirme işlemi yapılabilir.
+
+Ortada görünen değerlerin üstüne tıklandığında ortada alt tarafta yer alan Target açılır penceresinde yapılacak işlemin etkilemesi istenilen alanı seçiyoruz.
+
+Ortada görünen değerlerlerden Target alanında username ve password yazan yerlere tıklandığında ortada alt tarafta Value alanına girilen deger test için girilen değerler olarak kabul ediliyor.
+
+Sadece 1 tane testi çalıştırmak için Selenium IDE ekranında sol tarafta en üstte Tests seçili iken listede yer alan testlerden birini seçiyoruz ve ortada Command alanının üstünde yer alan Run Current Test butonuna tıklıyoruz.
+
+Tüm testleri çalıştırmak için Selenium IDE ekranında sol tarafta en üstte Tests seçili iken listede yer alan testlerden herhangi biri seçili olsa bile ve ortada Command alanının üstünde yer alan Run All Test butonuna tıklıyoruz.
+
+Ortada Commanda ve Target alanlarının altında yer alan işlemlerin herhangi birinden sonrasına başka bir işlem eklemek için, yapılacak işlemin hangi işlemden sonra yapılmasını istiyorsak o işlemi seçip Sağ tıkladıktan sonra açılan pencerede Insert New Command Satırına tıklıyoruz. Açılan boş satırdan yapılacak işlemi belirtiyoruz.
+
+Ortada görünen işlemlerden herhangi birinin üstünde sağ tıkladıktan sonra çıkan pencerede Record From Here komutuna tıklandığında sağ tıklama işleminin yapıldığı satıra kadara işlemi yapıyor. Sağ tıklanan satırdan sonra ki kısım için testin bitiminde Star Recording yazan buton görünecek. Bu kısımdan sonra yapılan işlemler üstüne yapılıyor gibi olacak.
+
+Invalid Login girişi yapıldığında çıkan hata mesajının doğru mesaj olma durumunu kontrol etmek istiyoruz. Bunun için Record işlemi başlatıldıktan sonra hata mesajının üstünde sağ tıklıyoruz çıkan pencerede Selenium IDE komut satırına geliyoruz. açılan diğer pencere Assert komut satırına tıklıyoruz. Çıkan pencerede Text komutuna tıklıyoruz. Selenium IDE içinde Command Alanının altında assert text yazdığı Target alanının altında css ve devamında hata mesajına nasıl ulaşıldığını belirten isim görünecek. Ortada alt tarafta Value alanına girilen değer ile ortada Value alanının altında görünen değer aynı ise test başarılı olacak.
+
+Test işleminin python kodlarını oluşturmak için Export yapmak gerekiyor. Bunun için Selenium IDE içinde en üstte Tests seçili iken yapılan testlerin üstüne gelip test adının devamında çıkan 3 noktaya tıklıyoruz. Çıkan pencerede Export komut satırına tıklıyoruz. Çıkan pencerede testin kodlarının hangi dilde oluşturulmasını istiyorsak onu seçiyoruz. Bu çalışmada Python pytest i seçiyoruz ve Export butonuna tıklıyoruz. Çıkan pencerede oluşturulacak dosyanın hangi dizinde olacağını seçiyoruz. Proje dizininde oluşturuması daha iyi olur. Bu işlemden sonra testin Python kodu proje klasörü içinde oluşturulacak.
+
+Selenium IDE Wait Ekleme
+
+Selenium IDE içinde ekranın sol üst tarafında Test yazan kısımda + işaretine tıklıyoruz. Çıkan pencerede teste isim veriyoruz. Selenium IDE içinde ekranın sağ üst köşesinde bulunan Record butonuna tıklıyoruz.
+
+Wait işleminin yapılacağı kısımda sağ tıklıyoruz. Çıkan pencerede Selenium IDE -> Wait For -> Visible sırasını takip ediyoruz ve Visible komutuna tıklıyoruz.
+
+Bu işlemleri yaptıktan sonra Selenium IDE içinde Run Current Test butonuna tıklıyoruz. Eğer visible kısmında hata verirse Selenium IDE içinde hata veren işlemi seçiyoruz altta Value alanına milisaniye cinsinden timeout (max bekleme zamanı) degeri giriyoruz.
